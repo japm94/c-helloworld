@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.72"/>
+    <errors>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;if(p)&apos; is redundant or there is possible null pointer dereference: p." verbose="Either the condition &apos;if(p)&apos; is redundant or there is possible null pointer dereference: p.">
+            <location file="testando.c" line="5"/>
+            <location file="testando.c" line="4"/>
+        </error>
+        <error id="nullPointer" severity="error" msg="Possible null pointer dereference: p" verbose="Possible null pointer dereference: p">
+            <location file="testando.c" line="23"/>
+        </error>
+        <error id="nullPointer" severity="error" msg="Possible null pointer dereference: p" verbose="Possible null pointer dereference: p">
+            <location file="testando.c" line="33"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;f1&apos; is never used." verbose="The function &apos;f1&apos; is never used.">
+            <location file="testando.c" line="1"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;f2&apos; is never used." verbose="The function &apos;f2&apos; is never used.">
+            <location file="testando.c" line="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;f3&apos; is never used." verbose="The function &apos;f3&apos; is never used.">
+            <location file="testando.c" line="26"/>
+        </error>
+    </errors>
+</results>
