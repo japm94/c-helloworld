@@ -3,14 +3,14 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.awakening</groupId>
+	<groupId>com.helloworld</groupId>
 	<artifactId>HelloWorld</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0</version>
 
 	<scm>
-		<connection>scm:svn:file:///home/zekitez/svn/repos/HelloWorld/trunk</connection>
-		<developerConnection>scm:svn:file:///home/zekitez/svn/repos/HelloWorld/trunk</developerConnection>
+		<connection>scm:git:https://github.com/japm94/c-helloworld.git</connection>
+		<developerConnection>scm:git:https://github.com/japm94/c-helloworld.git</developerConnection>
 	</scm>
 
 	<build>
@@ -24,7 +24,7 @@
 						<id>generateSources</id>
 						<phase>generate-sources</phase>
 						<configuration>
-							<tasks>
+							<target>
 								<exec executable="/bin/bash">
 									<arg value="myFirst.sh" />
 									<arg value="inputOne" />
@@ -33,7 +33,7 @@
 									<arg value="src/mySecond.sh" />
 									<arg value="inputTwo" />
 								</exec>
-							</tasks>
+							</target>
 						</configuration>
 						<goals>
 							<goal>run</goal>
@@ -63,6 +63,16 @@
 						<goals>
 							<goal>run</goal>
 						</goals>
+					</execution>
+					<execution>
+						<id>cppcheck</id>
+						<phase>codeAnalysis</phase>
+						<configuration>
+							<target>
+								<exec executable="cppcheck --xml --xml-version=2 --enable=all src/main/testando.c 2> cppcheck-report.xml">
+								</exec>
+							</target>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
