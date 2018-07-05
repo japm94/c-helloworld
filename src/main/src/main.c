@@ -2,6 +2,6 @@
 
 int main(int argc, char** argv)
 {
-	  printf("MAIN: DIZ TU, CONDENADO!.\n");
+	  printf("MAIN: hello world.\n");
   return 0;
 }
